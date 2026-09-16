@@ -1,0 +1,18 @@
+# Entorno virtual
+venv/
+.venv/
+
+# Bytecode / cache de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Salida de PyInstaller (se regenera con build.bat / build_diagnostico.bat)
+build/
+dist/
+
+# Editor / SO
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
