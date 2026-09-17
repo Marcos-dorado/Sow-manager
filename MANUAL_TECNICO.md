@@ -275,11 +275,15 @@ pip install -r requirements.txt
 
 ### 6.2 Notas sobre `requirements.txt`
 
-Lista únicamente las dependencias que el código en `src/` realmente importa (directas o de
-propósito claro): `beautifulsoup4`/`lxml` para parsear el HTML del correo, `openpyxl` para el
-Excel, `python-docx` para los Word, `pywin32` para Outlook, y el resto son dependencias de esos
-paquetes. No incluye librerías de análisis de datos ni de lectura de PDF porque nada en `src/` las
-usa — los PDFs adjuntos solo se archivan en disco, nunca se leen.
+Casi todo lo que lista son dependencias que el código en `src/` realmente importa: `beautifulsoup4`/
+`lxml` para parsear el HTML del correo, `openpyxl` para el Excel, `python-docx` para los Word,
+`pywin32` para Outlook, y el resto son dependencias de esos paquetes. No incluye librerías de
+análisis de datos ni de lectura de PDF porque nada en `src/` las usa — los PDFs adjuntos solo se
+archivan en disco, nunca se leen.
+
+La excepción es **`pyinstaller`**: no lo usa el código de la app, solo hace falta para compilar el
+`.exe` (`build.bat`). Está igual en el archivo para que `pip install -r requirements.txt` deje todo
+lo necesario listo de una sola vez, tanto para correr la app desde código como para compilarla.
 
 ### 6.3 Requisitos del entorno de ejecución
 
